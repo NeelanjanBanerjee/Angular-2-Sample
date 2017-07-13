@@ -4,9 +4,10 @@ import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { EventsListComponent } from './events-list.component';
-import { EventDetailsComponent } from './event-details.component';
 import { EventService } from './event.service';
 import { appRoutes } from './routes'
+import { NavComponent } from './nav/navbar.component'
+import { LoginComponent } from './user/login.component'
 
 @NgModule({
   imports: [ 
@@ -16,7 +17,8 @@ import { appRoutes } from './routes'
   declarations: [
     AppComponent,
     EventsListComponent,
-    EventDetailsComponent
+    NavComponent,
+    LoginComponent
   ],
   providers: [ EventService ],
   bootstrap: [ AppComponent ]
