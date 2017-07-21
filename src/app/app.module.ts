@@ -1,26 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'
+import { NgGridModule, NgGridItemConfig, NgGridConfig, NgGridItemEvent } from 'angular2-grid';
 
 import { AppComponent } from './app.component';
-import { EventsListComponent } from './events-list.component';
-import { EventService } from './event.service';
 import { appRoutes } from './routes'
 import { NavComponent } from './nav/navbar.component'
 import { LoginComponent } from './user/login.component'
+import { DashboardContainerComponent } from './dashboard/dashboard-container.component'
 
 @NgModule({
   imports: [ 
     BrowserModule,
+    NgGridModule,
     RouterModule.forRoot(appRoutes)
+    
   ],
   declarations: [
     AppComponent,
-    EventsListComponent,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardContainerComponent
+  
   ],
-  providers: [ EventService ],
+  providers: [ ],  
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

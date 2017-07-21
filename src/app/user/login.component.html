@@ -7,7 +7,7 @@
         <div class="login-box-body">
             <p class="login-box-msg"><b>Smart</b>CNR</p>
             <div ng-show="error" class="alert alert-danger">{{error}}</div>
-            <form ng-submit="login()" ng-model = "loginData">
+            <form  ng-submit="login()" ng-model = "loginData">
                 <div class="form-group has-feedback">
                     <input ng-disabled="dataLoading" type="text" class="form-control" placeholder="User ID" ng-model="loginData.username" required/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>

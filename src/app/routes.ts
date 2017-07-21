@@ -1,7 +1,12 @@
 import { Routes } from '@angular/router'
+import { DashboardContainerComponent } from './dashboard/dashboard-container.component'
 
-import { EventsListComponent} from './events-list.component'
 
 export const appRoutes:Routes = [
-  { path: '', component: EventsListComponent }
+
+
+  { path: 'dashboard', component: DashboardContainerComponent } ,
+  { path: '', redirectTo:'/dashboard' } 
+  
+
 ]
