@@ -1,18 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'
+import { FormsModule } from '@angular/forms'
 import { NgGridModule, NgGridItemConfig, NgGridConfig, NgGridItemEvent } from 'angular2-grid';
 
 import { AppComponent } from './app.component';
-import { appRoutes } from './routes'
-import { NavComponent } from './nav/navbar.component'
-import { LoginComponent } from './user/login.component'
-import { DashboardContainerComponent } from './dashboard/dashboard-container.component'
+import { appRoutes } from './routes';
+import { AuthService } from './services/auth.service';
+
+import {
+  LoginComponent
+} from './user/index'
+
+import {
+  NavComponent
+} from './nav/index'
+
+import {
+  CreateTaskComponent
+} from './task/index'
+
+
+import {
+  DashboardContainerComponent
+} from './dashboard/index'
 
 @NgModule({
   imports: [ 
     BrowserModule,
     NgGridModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
     
   ],
@@ -20,10 +37,12 @@ import { DashboardContainerComponent } from './dashboard/dashboard-container.com
     AppComponent,
     NavComponent,
     LoginComponent,
-    DashboardContainerComponent
+    DashboardContainerComponent,
+    CreateTaskComponent
+    
   
   ],
-  providers: [ ],  
+  providers: [ AuthService],  
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
